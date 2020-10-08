@@ -10,6 +10,8 @@ package cse360assignment02;
  * This is the AddingMachine class. 
  */ 
 public class AddingMachine {
+	public static void main(String[] args) {
+	}
 	  private int total;
 	  private String transactionHistory = "0";
 	  
