@@ -1,16 +1,17 @@
 /**
  * CSE 360 
  * Assignment 1 
- * @version 1.0 
+ * @version 2.0 
  * @author Xiang Luo <xluo55@asu.edu> 
  */ 
 package cse360assignment02; 
 
 /**
- * This is the main method. 
+ * This is the AddingMachine class. 
  */ 
 public class AddingMachine {
 	  private int total;
+	  private String transactionHistory = "0";
 	  
 	  /**
 	   * This is a constructor. 
@@ -24,7 +25,7 @@ public class AddingMachine {
 	   * @return the current total 
 	   */
 	  public int getTotal () {
-	    return 0;
+	    return total;
 	  }
 	  
 	  /**
@@ -32,6 +33,8 @@ public class AddingMachine {
 	   * @param value This is an integer adds to the total variable.
 	   */ 
 	  public void add (int value) {
+		  total = total + value;
+		  transactionHistory += " + " + value; 
 	  }
 	  
 	  /**
@@ -39,6 +42,9 @@ public class AddingMachine {
 	   * @param value This is an integer subtracts from the total variable.
 	   */ 
 	  public void subtract (int value) {
+		  total = total - value;
+		  transactionHistory += " - " + value; 
+
 	  }
 	  
 	  /**
@@ -46,12 +52,14 @@ public class AddingMachine {
 	   * @return history of transactions 
 	   */
 	  public String toString () {
-	    return "";
+	    return transactionHistory;
 	  }
 	  
 	  /**
 	   * This method clear AddingMachine.
 	   */ 
 	  public void clear() {
+		  total = 0;
+		  transactionHistory = "0";
 	  }
 	}
